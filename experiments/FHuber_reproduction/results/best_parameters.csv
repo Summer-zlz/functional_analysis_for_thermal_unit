@@ -1,0 +1,4 @@
+dataset,psi_index,psi,alpha,lambda,max_iter,eligible,mean_validation_RMSE,status,fold1_RMSE,fold1_status,fold2_RMSE,fold2_status,fold3_RMSE,fold3_status,tie_rule
+UP,15,10000000000,0.0001,0.10000000000000001,500000,True,5.8155964849177222,eligible,5.3762702140868193,max_iter,4.3423677047255236,converged,7.7281515359408237,max_iter,smallest psi then lambda for exact validation RMSE ties
+DOWN,7,1389.4954943731359,0.0001,0.01,500000,True,7.6617091320798876,eligible,7.7940319351208975,max_iter,4.389126276442858,max_iter,10.801969184675906,max_iter,smallest psi then lambda for exact validation RMSE ties
+STABLE,6,193.06977288832496,0.0001,0.10000000000000001,500000,True,5.6911504867429334,eligible,6.1308456523719626,max_iter,4.4725096214189577,max_iter,6.4700961864378792,max_iter,smallest psi then lambda for exact validation RMSE ties
