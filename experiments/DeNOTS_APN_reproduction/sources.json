@@ -1,0 +1,14 @@
+{
+  "denots": {
+    "repository": "https://github.com/Ilykuleshov/denots_iclr2026",
+    "commit": "675c214e57c052f8e6cf2c6c12c05c5d2a47da0b",
+    "download": "Git clone; process-local TLS bypass for proxy issue; commit independently checked",
+    "identity_check": "DeNOTS: HTTPS GitHub API commit; APN: official GitHub commit page"
+  },
+  "apn": {
+    "repository": "https://github.com/decisionintelligence/APN",
+    "commit": "f0d6eeb7a2ee2d7c76475bf725b7ea25f98af3f4",
+    "download": "Git clone; process-local TLS bypass for proxy issue; commit independently checked",
+    "identity_check": "DeNOTS: HTTPS GitHub API commit; APN: official GitHub commit page"
+  }
+}

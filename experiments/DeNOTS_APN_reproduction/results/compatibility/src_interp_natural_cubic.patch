@@ -1,0 +1,24 @@
+--- denots\src\interp\natural_cubic.py
++++ in-memory compatibility
+@@ -133,14 +133,13 @@
+         eval_vmapped = torch.vmap(eval_cubic_spline_1d)
+ 
+         # Vmap over the channel dimension.
+-        match t.ndim:
+-            case 3:
+-                fit_vmapped = torch.vmap(fit_vmapped, -1, -1)
+-                eval_vmapped = torch.vmap(eval_vmapped, (-1, -1, None), -1)
+-            case 2:
+-                fit_vmapped = torch.vmap(fit_vmapped, (None, -1), -1)
+-            case _:
+-                raise ValueError(t)
++        if t.ndim == 3:
++            fit_vmapped = torch.vmap(fit_vmapped, -1, -1)
++            eval_vmapped = torch.vmap(eval_vmapped, (-1, -1, None), -1)
++        elif t.ndim == 2:
++            fit_vmapped = torch.vmap(fit_vmapped, (None, -1), -1)
++        else:
++            raise ValueError(t)
+ 
+         self.coeffs: Tensor = fit_vmapped(t, x)  # (B, 4, L, C)
+         self.eval_vmapped = eval_vmapped

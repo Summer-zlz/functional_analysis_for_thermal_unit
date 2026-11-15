@@ -1,0 +1,7 @@
+model,dataset,candidate,hidden_dim,denots_depth,mean_validation_RMSE,final_epochs,epoch_rule,tie_rule,apn_patches,apn_time_dimension
+DeNOTS,UP,width16_depth5,16,5.0,9.845301335127035,66,rounded median of selected candidate's three best validation epochs,"ascending hidden_dim, denots_depth",,
+DeNOTS,DOWN,width16_depth5,16,5.0,8.255623911259699,9,rounded median of selected candidate's three best validation epochs,"ascending hidden_dim, denots_depth",,
+DeNOTS,STABLE,width8_depth1,8,1.0,4.368678635045668,1,rounded median of selected candidate's three best validation epochs,"ascending hidden_dim, denots_depth",,
+APN,UP,width16_patch2_te8,16,,9.446115872042762,87,rounded median of selected candidate's three best validation epochs,"ascending hidden_dim, apn_patches, apn_time_dimension",2.0,8.0
+APN,DOWN,width8_patch1_te8,8,,9.3158585748965,1,rounded median of selected candidate's three best validation epochs,"ascending hidden_dim, apn_patches, apn_time_dimension",1.0,8.0
+APN,STABLE,width16_patch2_te8,16,,4.000286415757198,18,rounded median of selected candidate's three best validation epochs,"ascending hidden_dim, apn_patches, apn_time_dimension",2.0,8.0

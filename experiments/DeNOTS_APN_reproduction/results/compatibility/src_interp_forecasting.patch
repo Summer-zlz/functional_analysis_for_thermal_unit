@@ -1,0 +1,19 @@
+--- denots\src\interp\forecasting.py
++++ in-memory compatibility
+@@ -32,10 +32,9 @@
+         if out_of_bounds.ndim < x.ndim:
+             out_of_bounds = out_of_bounds.unsqueeze(-1)
+ 
+-        match self.forecast_method:
+-            case "zero":
+-                return torch.where(out_of_bounds, 0, x)
+-            case "last":
+-                return x
+-            case _:
+-                raise ValueError()
++        if self.forecast_method == "zero":
++            return torch.where(out_of_bounds, 0, x)
++        elif self.forecast_method == "last":
++            return x
++        else:
++            raise ValueError()

@@ -1,0 +1,11 @@
+--- apn\models\APN.py
++++ in-memory compatibility
+@@ -4,8 +4,6 @@
+ import torch.nn as nn
+ import torch.nn.functional as F
+ 
+-from utils.globals import logger
+-from utils.ExpConfigs import ExpConfigs
+ 
+ class PositionalEncoding(nn.Module):
+     def __init__(self, d_model, max_len=512):
